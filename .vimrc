@@ -1,5 +1,10 @@
 call pathogen#infect()
 
+" change the mapleader from \ to , it's important that this
+" is at/near the top of the file so that other mapped comamnds
+" use this leader
+let mapleader=","
+
 "Helptags
 syntax on
 filetype plugin indent on
@@ -10,6 +15,9 @@ set softtabstop=4
 set expandtab
 set backspace=indent,eol,start
 set modeline
+
+" Show commands in status bar
+set showcmd
 
 set title
 set nobackup
@@ -51,9 +59,17 @@ set statusline+=%b,0x%-8B\                   " current char
 set statusline+=%-14.(%l,%c%V%)\ %<%P        " offset
 
 " Toggle Nerd Tree plugin
-map <F4> :NERDTreeToggle<CR>
+map <leader>n :NERDTreeToggle<CR>
+" Toggle fuzzy file/buffer search
+map <leader>b :CtrlP<CR>
+nmap <leader>a <Esc>:Ack!
 
 " visual shifting (does not exit Visual mode)
 vnoremap < <gv
 vnoremap > >gv
 
+" Remap window movements
+map <c-j> <c-w>j
+map <c-k> <c-w>k
+map <c-l> <c-w>l
+map <c-h> <c-w>h
