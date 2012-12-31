@@ -8,6 +8,8 @@ let mapleader=","
 "Helptags
 syntax on
 filetype plugin indent on
+
+set encoding=utf-8
 set number
 set tabstop=4
 set shiftwidth=4
@@ -15,6 +17,32 @@ set softtabstop=4
 set expandtab
 set backspace=indent,eol,start
 set modeline
+set relativenumber
+set scrolloff=3
+set cursorline
+set ttyfast
+set laststatus=2
+
+set autoindent
+set copyindent
+set smartindent
+
+set ignorecase
+set smartcase
+
+" Highlight search results as you type
+set incsearch
+set showmatch
+set hlsearch
+
+" global find/replace by default
+set gdefault
+
+" Manage line wrapping
+set wrap
+set textwidth=79
+set formatoptions=qrn1
+set colorcolumn=85
 
 " Show commands in status bar
 set showcmd
@@ -38,11 +66,8 @@ autocmd vimenter * if !argc() | NERDTree | endif
 autocmd FileType php set omnifunc=phpcomplete#CompletePHP
 autocmd FileType python set omnifunc=pythoncomplete#Complete
 
-let g:SuperTabDefaultCompletionType = "context"
-
-set autoindent
-set copyindent
-set smartindent
+""let g:SuperTabDefaultCompletionType = "context"
+set completeopt=menuone,longest,preview
 
 " Always show status line, even for one window
 set laststatus=2
@@ -59,10 +84,16 @@ set statusline+=%b,0x%-8B\                   " current char
 set statusline+=%-14.(%l,%c%V%)\ %<%P        " offset
 
 " Toggle Nerd Tree plugin
-map <leader>n :NERDTreeToggle<CR>
+nmap <leader>n :NERDTreeToggle<CR>
+
 " Toggle fuzzy file/buffer search
-map <leader>b :CtrlP<CR>
+nmap <leader>b :CtrlP<CR>
+
 nmap <leader>a <Esc>:Ack!
+nmap <leader>h :GundoToggle<CR>
+
+" Easily clear out search highlighting
+nnoremap <leader><space> :noh<cr>
 
 " visual shifting (does not exit Visual mode)
 vnoremap < <gv
