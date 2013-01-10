@@ -43,3 +43,6 @@
 [submodule "bundle/tagbar"]
 	path = bundle/tagbar
 	url = git://github.com/majutsushi/tagbar.git
+[submodule "colors/desert.vim"]
+	path = colors/desert.vim
+	url = git://github.com/fugalh/desert.vim.git

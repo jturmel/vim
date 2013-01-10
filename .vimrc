@@ -9,6 +9,8 @@ let mapleader=","
 syntax on
 filetype plugin indent on
 
+colorscheme desert
+
 set encoding=utf-8
 set number
 set tabstop=4
@@ -42,7 +44,7 @@ set gdefault
 set wrap
 set textwidth=79
 set formatoptions=qrn1
-set colorcolumn=85
+set colorcolumn=80
 
 " Show commands in status bar
 set showcmd
@@ -87,7 +89,8 @@ set statusline+=%-14.(%l,%c%V%)\ %<%P        " offset
 nmap <leader>n :NERDTreeToggle<CR>
 
 " Toggle fuzzy file/buffer search
-nmap <leader>b :CtrlP<CR>
+"nmap <leader>b :CtrlP<CR>
+nmap <leader>b :CtrlPMixed<CR>
 
 nmap <leader>a <Esc>:Ack!
 nmap <leader>h :GundoToggle<CR>
@@ -99,6 +102,15 @@ nnoremap <leader><space> :noh<cr>
 " visual shifting (does not exit Visual mode)
 vnoremap < <gv
 vnoremap > >gv
+
+" Delete trailing white space on save, useful for Python
+func! DeleteTrailingWS()
+  exe "normal mz"
+  %s/\s\+$//ge
+  exe "normal `z"
+endfunc
+autocmd BufWrite *.py :call DeleteTrailingWS()
+autocmd BufWrite *.php :call DeleteTrailingWS()
 
 " Remap window movements
 map <c-j> <c-w>j
