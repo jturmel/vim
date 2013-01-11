@@ -46,3 +46,6 @@
 [submodule "colors/desert.vim"]
 	path = colors/desert.vim
 	url = git://github.com/fugalh/desert.vim.git
+[submodule "bundle/command-t"]
+	path = bundle/command-t
+	url = git://git.wincent.com/command-t.git

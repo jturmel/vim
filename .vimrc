@@ -95,6 +95,7 @@ nmap <leader>b :CtrlPMixed<CR>
 nmap <leader>a <Esc>:Ack!
 nmap <leader>h :GundoToggle<CR>
 nmap <leader>o :TagbarOpenAutoClose<CR>
+map <unique> <Leader>T <Plug>TaskList
 
 " Easily clear out search highlighting
 nnoremap <leader><space> :noh<cr>
