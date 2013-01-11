@@ -89,13 +89,13 @@ set statusline+=%-14.(%l,%c%V%)\ %<%P        " offset
 nmap <leader>n :NERDTreeToggle<CR>
 
 " Toggle fuzzy file/buffer search
-"nmap <leader>b :CtrlP<CR>
 nmap <leader>b :CtrlPMixed<CR>
+let g:ctrlp_match_window_reversed = 0
+let g:ctrlp_clear_cache_on_exit = 0
 
 nmap <leader>a <Esc>:Ack!
 nmap <leader>h :GundoToggle<CR>
 nmap <leader>o :TagbarOpenAutoClose<CR>
-map <unique> <Leader>T <Plug>TaskList
 
 " Easily clear out search highlighting
 nnoremap <leader><space> :noh<cr>
