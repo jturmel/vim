@@ -1,3 +1,5 @@
+set nocp
+
 call pathogen#infect()
 
 " change the mapleader from \ to , it's important that this
@@ -9,7 +11,9 @@ let mapleader=","
 syntax on
 filetype plugin indent on
 
-colorscheme desert
+syntax enable
+set background=dark
+colorscheme solarized
 
 set encoding=utf-8
 set number
@@ -99,6 +103,9 @@ nmap <leader>o :TagbarOpenAutoClose<CR>
 
 " Easily clear out search highlighting
 nnoremap <leader><space> :noh<cr>
+
+" Remap omnicompletion to ctrl-space
+inoremap <C-space> <C-x><C-o>
 
 " visual shifting (does not exit Visual mode)
 vnoremap < <gv
