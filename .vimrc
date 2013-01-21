@@ -1,5 +1,7 @@
 set nocp
 
+filetype off
+
 call pathogen#infect()
 
 " change the mapleader from \ to , it's important that this
@@ -8,8 +10,8 @@ call pathogen#infect()
 let mapleader=","
 
 "Helptags
-syntax on
 filetype plugin indent on
+syntax on
 
 syntax enable
 set background=dark
