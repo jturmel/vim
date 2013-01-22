@@ -1,7 +1,5 @@
 set nocp
 
-filetype off
-
 call pathogen#infect()
 
 " change the mapleader from \ to , it's important that this
@@ -10,12 +8,14 @@ call pathogen#infect()
 let mapleader=","
 
 "Helptags
+filetype off
 filetype plugin indent on
 syntax on
 
 syntax enable
 set background=dark
 colorscheme solarized
+"colorscheme desert
 
 set encoding=utf-8
 set number
@@ -51,6 +51,7 @@ set wrap
 set textwidth=79
 set formatoptions=qrn1
 set colorcolumn=80
+"highlight ColorColumn ctermbg=233
 
 " Show commands in status bar
 set showcmd
@@ -95,6 +96,7 @@ set statusline+=%-14.(%l,%c%V%)\ %<%P        " offset
 nmap <leader>n :NERDTreeToggle<CR>
 
 " Toggle fuzzy file/buffer search
+"nmap <leader>b :CtrlP<CR>
 nmap <leader>b :CtrlPMixed<CR>
 let g:ctrlp_match_window_reversed = 0
 let g:ctrlp_clear_cache_on_exit = 0
@@ -105,9 +107,6 @@ nmap <leader>o :TagbarOpenAutoClose<CR>
 
 " Easily clear out search highlighting
 nnoremap <leader><space> :noh<cr>
-
-" Remap omnicompletion to ctrl-space
-inoremap <C-space> <C-x><C-o>
 
 " visual shifting (does not exit Visual mode)
 vnoremap < <gv
