@@ -43,3 +43,12 @@
 [submodule "bundle/vim-colors-solarized"]
 	path = bundle/vim-colors-solarized
 	url = git://github.com/altercation/vim-colors-solarized.git
+[submodule "bundle/rope-omni"]
+	path = bundle/rope-omni
+	url = git://github.com/rygwdn/rope-omni.git
+[submodule "bundle/virtualenv"]
+	path = bundle/virtualenv
+	url = git://github.com/jmcantrell/vim-virtualenv.git
+[submodule "bundle/python-mode"]
+	path = bundle/python-mode
+	url = https://github.com/klen/python-mode

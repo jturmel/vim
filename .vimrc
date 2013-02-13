@@ -1,5 +1,7 @@
 set nocp
 
+"let g:pathogen_disabled = ['python-mode']
+
 call pathogen#infect()
 
 " change the mapleader from \ to , it's important that this
@@ -14,8 +16,10 @@ syntax on
 
 syntax enable
 set background=dark
+let g:solarized_termtrans=1
+let g:solarized_contrast="high"
+let g:solarized_visibility="high"
 colorscheme solarized
-"colorscheme desert
 
 set encoding=utf-8
 set number
@@ -51,7 +55,6 @@ set wrap
 set textwidth=79
 set formatoptions=qrn1
 set colorcolumn=80
-"highlight ColorColumn ctermbg=233
 
 " Show commands in status bar
 set showcmd
@@ -73,10 +76,11 @@ autocmd vimenter * if !argc() | NERDTree | endif
 
 " Use omnifunc for autocompletion
 autocmd FileType php set omnifunc=phpcomplete#CompletePHP
-autocmd FileType python set omnifunc=pythoncomplete#Complete
+"autocmd FileType python set omnifunc=pythoncomplete#Complete
+"autocmd FileType python setlocal omnifunc=RopeCompleteFunc
 
-""let g:SuperTabDefaultCompletionType = "context"
-set completeopt=menuone,longest,preview
+let g:SuperTabDefaultCompletionType = "context"
+set completeopt=longest,menuone,preview
 
 " Always show status line, even for one window
 set laststatus=2
@@ -104,6 +108,7 @@ let g:ctrlp_clear_cache_on_exit = 0
 nmap <leader>a <Esc>:Ack!
 nmap <leader>h :GundoToggle<CR>
 nmap <leader>o :TagbarOpenAutoClose<CR>
+nmap <leader>s :sort<CR>
 
 " Easily clear out search highlighting
 nnoremap <leader><space> :noh<cr>
@@ -126,3 +131,20 @@ map <c-j> <c-w>j
 map <c-k> <c-w>k
 map <c-l> <c-w>l
 map <c-h> <c-w>h
+
+set exrc
+set secure
+
+"Powerline
+source /Users/jturmel/.pythonbrew/pythons/Python-2.7.3/lib/python2.7/site-packages/powerline/bindings/vim/plugin/source_plugin.vim
+
+let g:pymode_rope_guess_project = 0
+let g:pymode_rope_autoimport_modules = ["os", "json"]
+let g:pymode_folding = 0
+let g:pymode_rope_autoimport_generate = 0
+let g:pymode_lint = 1
+"let g:pymode_lint_write = 0
+let g:pymode_lint_checker = "pyflakes,pep8"
+let g:pymode_utils_whitespaces = 0
+let g:pymode_breakpoint = 0
+let g:pymode_lint_ignore = "E501,W404"
