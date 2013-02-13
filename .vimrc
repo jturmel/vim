@@ -136,7 +136,7 @@ set exrc
 set secure
 
 "Powerline
-source /Users/jturmel/.pythonbrew/pythons/Python-2.7.3/lib/python2.7/site-packages/powerline/bindings/vim/plugin/source_plugin.vim
+source $HOME/.pythonbrew/pythons/Python-2.7.3/lib/python2.7/site-packages/powerline/bindings/vim/plugin/source_plugin.vim
 
 let g:pymode_rope_guess_project = 0
 let g:pymode_rope_autoimport_modules = ["os", "json"]
