@@ -108,7 +108,7 @@ let g:ctrlp_clear_cache_on_exit = 0
 nmap <leader>a <Esc>:Ack!
 nmap <leader>h :GundoToggle<CR>
 nmap <leader>o :TagbarOpenAutoClose<CR>
-nmap <leader>s :sort<CR>
+map <leader>s :sort<CR>
 
 " Easily clear out search highlighting
 nnoremap <leader><space> :noh<cr>
