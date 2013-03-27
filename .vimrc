@@ -52,6 +52,7 @@ set gdefault
 
 " Manage line wrapping
 set wrap
+:autocmd BufNewFile,BufRead *.rst set nowrap
 set textwidth=79
 set formatoptions=qrn1
 set colorcolumn=80
@@ -102,11 +103,17 @@ nmap <leader>n :NERDTreeToggle<CR>
 " Toggle fuzzy file/buffer search
 "nmap <leader>b :CtrlP<CR>
 nmap <leader>b :CtrlPMixed<CR>
-let g:ctrlp_match_window_reversed = 0
+nmap <leader>h :CtrlPBufTagAll<CR>
+"let g:ctrlp_match_window_reversed = 0
 let g:ctrlp_clear_cache_on_exit = 0
+let g:ctrlp_mruf_case_sensitive = 0
+let g:ctrlp_mruf_relative = 1
+"let g:ctrlp_extensions = ['tag', 'buffertag', 'quickfix', 'dir', 'rtscript',
+                          "\ 'undo', 'line', 'changes', 'mixed', 'bookmarkdir']
+let g:ctrlp_extensions = ['buffertag']
 
 nmap <leader>a <Esc>:Ack!
-nmap <leader>h :GundoToggle<CR>
+"nmap <leader>h :GundoToggle<CR>
 nmap <leader>o :TagbarOpenAutoClose<CR>
 map <leader>s :sort<CR>
 
@@ -136,7 +143,7 @@ set exrc
 set secure
 
 "Powerline
-source $HOME/.pythonbrew/pythons/Python-2.7.3/lib/python2.7/site-packages/powerline/bindings/vim/plugin/source_plugin.vim
+source /Users/jturmel/.pythonbrew/pythons/Python-2.7.3/lib/python2.7/site-packages/powerline/bindings/vim/plugin/source_plugin.vim
 
 let g:pymode_rope_guess_project = 0
 let g:pymode_rope_autoimport_modules = ["os", "json"]
