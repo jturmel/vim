@@ -1,6 +1,6 @@
 set nocp
 
-"let g:pathogen_disabled = ['python-mode']
+let g:pathogen_disabled = ['auto-pairs']
 
 call pathogen#infect()
 
@@ -98,7 +98,7 @@ set statusline+=%b,0x%-8B\                   " current char
 set statusline+=%-14.(%l,%c%V%)\ %<%P        " offset
 
 " Toggle Nerd Tree plugin
-nmap <leader>n :NERDTreeToggle<CR>
+nmap <leader>p :NERDTreeToggle<CR>
 
 " Toggle fuzzy file/buffer search
 "nmap <leader>b :CtrlP<CR>
@@ -112,13 +112,19 @@ let g:ctrlp_mruf_relative = 1
                           "\ 'undo', 'line', 'changes', 'mixed', 'bookmarkdir']
 let g:ctrlp_extensions = ['buffertag']
 
-nmap <leader>a <Esc>:Ack!
+nmap <leader>a <ESC>:Ack!
 "nmap <leader>h :GundoToggle<CR>
 nmap <leader>o :TagbarOpenAutoClose<CR>
 map <leader>s :sort<CR>
 
 " Easily clear out search highlighting
 nnoremap <leader><space> :noh<cr>
+
+" Go to next quickfix result
+nnoremap <leader>n :cn<CR>
+
+" Close quickfix result window
+nnoremap <leader>c :ccl<CR>
 
 " visual shifting (does not exit Visual mode)
 vnoremap < <gv
@@ -143,15 +149,18 @@ set exrc
 set secure
 
 "Powerline
-source /Users/jturmel/.pythonbrew/pythons/Python-2.7.3/lib/python2.7/site-packages/powerline/bindings/vim/plugin/source_plugin.vim
+"source /Users/jturmel/.pythonbrew/pythons/Python-2.7.3/lib/python2.7/site-packages/powerline/bindings/vim/plugin/source_plugin.vim
+source /Users/jturmel/.pythonbrew/pythons/Python-2.7.3/lib/python2.7/site-packages/powerline/bindings/vim/plugin/powerline.vim
 
-let g:pymode_rope_guess_project = 0
-let g:pymode_rope_autoimport_modules = ["os", "json"]
+"let g:pymode_rope_guess_project = 0
+let g:pymode_rope_autoimport_modules = ["os", "json", "webapp2"]
 let g:pymode_folding = 0
-let g:pymode_rope_autoimport_generate = 0
+let g:pymode_rope_autoimport_generate = 1
 let g:pymode_lint = 1
 "let g:pymode_lint_write = 0
 let g:pymode_lint_checker = "pyflakes,pep8"
-let g:pymode_utils_whitespaces = 0
+"let g:pymode_utils_whitespaces = 0
 let g:pymode_breakpoint = 0
 let g:pymode_lint_ignore = "E501,W404"
+
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
