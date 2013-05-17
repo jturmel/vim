@@ -159,8 +159,10 @@ let g:pymode_rope_autoimport_generate = 1
 let g:pymode_lint = 1
 "let g:pymode_lint_write = 0
 let g:pymode_lint_checker = "pyflakes,pep8"
-"let g:pymode_utils_whitespaces = 0
+let g:pymode_utils_whitespaces = 0
 let g:pymode_breakpoint = 0
-let g:pymode_lint_ignore = "E501,W404"
+"let g:pymode_lint_ignore = "E501,W404"
 
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+
+:nmap <leader>t "=strftime('%s')<C-M>p"
