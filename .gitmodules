@@ -58,3 +58,18 @@
 [submodule "bundle/vim-surround"]
 	path = bundle/vim-surround
 	url = git://github.com/tpope/vim-surround.git
+[submodule "vim-unimpaired"]
+	path = vim-unimpaired
+	url = git://github.com/tpope/vim-unimpaired.git
+[submodule "bundle/tslime"]
+	path = bundle/tslime
+	url = https://github.com/jgdavey/tslime.vim.git
+[submodule "bundle/numbers.vim"]
+	path = bundle/numbers.vim
+	url = https://github.com/myusuf3/numbers.vim.git
+[submodule "bundle/YouCompleteMe"]
+	path = bundle/YouCompleteMe
+	url = https://github.com/Valloric/YouCompleteMe.git
+[submodule "bundle/vim-unimpaired"]
+	path = bundle/vim-unimpaired
+	url = https://github.com/tpope/vim-unimpaired.git

@@ -21,19 +21,20 @@ let g:solarized_contrast="high"
 let g:solarized_visibility="high"
 colorscheme solarized
 
+"autocmd BufEnter * set relativenumber
+set backspace=indent,eol,start
+set cursorline
 set encoding=utf-8
+set expandtab
+set laststatus=2
+set modeline
 set number
-set tabstop=4
+set scrolloff=3
 set shiftwidth=4
 set softtabstop=4
-set expandtab
-set backspace=indent,eol,start
-set modeline
-autocmd BufEnter * set relativenumber
-set scrolloff=3
-set cursorline
-set ttyfast
-set laststatus=2
+set tabstop=4
+set ttyfast "Improved redrawing
+set history=1000
 
 set autoindent
 set copyindent
@@ -69,19 +70,10 @@ set noswapfile
 set hidden
 
 :command Upload :!upload.py %;
-
 :command Wu w | Upload
 
 " Open NERD tree if no files were specified when starting vim
 autocmd vimenter * if !argc() | NERDTree | endif
-
-" Use omnifunc for autocompletion
-autocmd FileType php set omnifunc=phpcomplete#CompletePHP
-"autocmd FileType python set omnifunc=pythoncomplete#Complete
-"autocmd FileType python setlocal omnifunc=RopeCompleteFunc
-
-let g:SuperTabDefaultCompletionType = "context"
-set completeopt=longest,menuone,preview
 
 " Always show status line, even for one window
 set laststatus=2
@@ -149,11 +141,10 @@ set exrc
 set secure
 
 "Powerline
-"source /Users/jturmel/.pythonbrew/pythons/Python-2.7.3/lib/python2.7/site-packages/powerline/bindings/vim/plugin/source_plugin.vim
 source /Users/jturmel/.pythonbrew/pythons/Python-2.7.3/lib/python2.7/site-packages/powerline/bindings/vim/plugin/powerline.vim
 
 "let g:pymode_rope_guess_project = 0
-let g:pymode_rope_autoimport_modules = ["os", "json", "webapp2"]
+"let g:pymode_rope_autoimport_modules = ["os", "json", "webapp2"]
 let g:pymode_folding = 0
 let g:pymode_rope_autoimport_generate = 1
 let g:pymode_lint = 1
@@ -166,3 +157,17 @@ let g:pymode_breakpoint = 0
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
 :nmap <leader>t "=strftime('%s')<C-M>p"
+
+let NERDTreeIgnore = ['\.pyc$']
+
+aug SmartDiffType
+    au!
+    au VimEnter * :if &diff && len(&ft) | call setwinvar(2/winnr(),'&ft',&ft) | elseif &diff | let &ft=getwinvar(2/winnr(),'&ft') | endif
+aug END
+
+"nnoremap ; o<Esc>
+
+nmap <leader>r <Plug>SetTmuxVars
+"nmap <leader>T :Tmux jasmine-node api/3.1/timeline<CR>
+
+let g:NERDTreeWinSize = 28
