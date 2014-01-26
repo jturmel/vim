@@ -141,7 +141,7 @@ set exrc
 set secure
 
 "Powerline
-source /Users/jturmel/.pythonbrew/pythons/Python-2.7.3/lib/python2.7/site-packages/powerline/bindings/vim/plugin/powerline.vim
+"source /Users/jturmel/.pythonbrew/pythons/Python-2.7.3/lib/python2.7/site-packages/powerline/bindings/vim/plugin/powerline.vim
 
 let g:pymode_folding = 0
 let g:pymode_rope_autoimport_generate = 1
@@ -149,6 +149,7 @@ let g:pymode_lint = 1
 let g:pymode_lint_checker = "pyflakes,pep8"
 let g:pymode_utils_whitespaces = 0
 let g:pymode_breakpoint = 0
+let g:pymode_lint_ignore = "W402"
 
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
