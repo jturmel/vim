@@ -168,3 +168,5 @@ nmap <leader>r <Plug>SetTmuxVars
 "nmap <leader>T :Tmux jasmine-node api/3.1/timeline<CR>
 
 let g:NERDTreeWinSize = 28
+
+let g:airline_powerline_fonts = 1
