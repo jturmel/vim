@@ -8,10 +8,10 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 
 Bundle 'tpope/vim-fugitive'
-
-"let g:pathogen_disabled = ['auto-pairs']
-
-"call pathogen#infect()
+Bundle 'tpope/vim-unimpaired'
+Bundle 'bling/vim-airline'
+Bundle 'klen/python-mode'
+Bundle 'scrooloose/nerdtree'
 
 " change the mapleader from \ to , it's important that this
 " is at/near the top of the file so that other mapped comamnds
