@@ -1,8 +1,17 @@
 set nocp
+filetype off
 
-let g:pathogen_disabled = ['auto-pairs']
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
 
-call pathogen#infect()
+" let Vundle manage Vundle
+Bundle 'gmarik/vundle'
+
+Bundle 'tpope/vim-fugitive'
+
+"let g:pathogen_disabled = ['auto-pairs']
+
+"call pathogen#infect()
 
 " change the mapleader from \ to , it's important that this
 " is at/near the top of the file so that other mapped comamnds
@@ -16,10 +25,10 @@ syntax on
 
 syntax enable
 set background=dark
-let g:solarized_termtrans=1
-let g:solarized_contrast="high"
-let g:solarized_visibility="high"
-colorscheme solarized
+"let g:solarized_termtrans=1
+"let g:solarized_contrast="high"
+"let g:solarized_visibility="high"
+"colorscheme solarized
 
 "autocmd BufEnter * set relativenumber
 set backspace=indent,eol,start
