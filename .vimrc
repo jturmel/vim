@@ -16,6 +16,7 @@ Bundle 'vim-ruby/vim-ruby'
 Bundle 'tpope/vim-endwise'
 Bundle 'bling/vim-airline'
 Bundle 'altercation/vim-colors-solarized'
+Bundle 'kien/ctrlp.vim'
 
 " change the mapleader from \ to , it's important that this
 " is at/near the top of the file so that other mapped comamnds
