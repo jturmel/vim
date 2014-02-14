@@ -12,6 +12,10 @@ Bundle 'tpope/vim-unimpaired'
 Bundle 'bling/vim-airline'
 Bundle 'klen/python-mode'
 Bundle 'scrooloose/nerdtree'
+Bundle 'vim-ruby/vim-ruby'
+Bundle 'tpope/vim-endwise'
+Bundle 'bling/vim-airline'
+Bundle 'altercation/vim-colors-solarized'
 
 " change the mapleader from \ to , it's important that this
 " is at/near the top of the file so that other mapped comamnds
@@ -24,11 +28,12 @@ filetype plugin indent on
 syntax on
 
 syntax enable
+colorscheme solarized
 set background=dark
-"let g:solarized_termtrans=1
-"let g:solarized_contrast="high"
-"let g:solarized_visibility="high"
-"colorscheme solarized
+let g:solarized_termtrans=1
+let g:solarized_termcolors=256
+let g:solarized_contrast="high"
+let g:solarized_visibility="high"
 
 "autocmd BufEnter * set relativenumber
 set backspace=indent,eol,start
@@ -139,6 +144,7 @@ func! DeleteTrailingWS()
 endfunc
 autocmd BufWrite *.py :call DeleteTrailingWS()
 autocmd BufWrite *.php :call DeleteTrailingWS()
+autocmd BufWrite *.rb :call DeleteTrailingWS()
 
 " Remap window movements
 map <c-j> <c-w>j
@@ -174,7 +180,6 @@ aug END
 "nnoremap ; o<Esc>
 
 nmap <leader>r <Plug>SetTmuxVars
-"nmap <leader>T :Tmux jasmine-node api/3.1/timeline<CR>
 
 let g:NERDTreeWinSize = 28
 
