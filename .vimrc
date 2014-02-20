@@ -9,7 +9,6 @@ Bundle 'gmarik/vundle'
 
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'bling/vim-airline'
-Bundle 'bling/vim-airline'
 Bundle 'kien/ctrlp.vim'
 Bundle 'klen/python-mode'
 Bundle 'mileszs/ack.vim'
