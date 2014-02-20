@@ -7,16 +7,17 @@ call vundle#rc()
 " let Vundle manage Vundle
 Bundle 'gmarik/vundle'
 
+Bundle 'altercation/vim-colors-solarized'
+Bundle 'bling/vim-airline'
+Bundle 'bling/vim-airline'
+Bundle 'kien/ctrlp.vim'
+Bundle 'klen/python-mode'
+Bundle 'mileszs/ack.vim'
+Bundle 'scrooloose/nerdtree'
+Bundle 'tpope/vim-endwise'
 Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-unimpaired'
-Bundle 'bling/vim-airline'
-Bundle 'klen/python-mode'
-Bundle 'scrooloose/nerdtree'
 Bundle 'vim-ruby/vim-ruby'
-Bundle 'tpope/vim-endwise'
-Bundle 'bling/vim-airline'
-Bundle 'altercation/vim-colors-solarized'
-Bundle 'kien/ctrlp.vim'
 
 " change the mapleader from \ to , it's important that this
 " is at/near the top of the file so that other mapped comamnds
