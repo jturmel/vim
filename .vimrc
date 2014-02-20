@@ -7,11 +7,13 @@ call vundle#rc()
 " let Vundle manage Vundle
 Bundle 'gmarik/vundle'
 
+Bundle 'Raimondi/delimitMate'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'bling/vim-airline'
 Bundle 'kien/ctrlp.vim'
 Bundle 'klen/python-mode'
 Bundle 'mileszs/ack.vim'
+Bundle 'myusuf3/numbers.vim'
 Bundle 'scrooloose/nerdtree'
 Bundle 'tpope/vim-endwise'
 Bundle 'tpope/vim-fugitive'

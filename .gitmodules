@@ -40,18 +40,12 @@
 [submodule "bundle/virtualenv"]
 	path = bundle/virtualenv
 	url = git://github.com/jmcantrell/vim-virtualenv.git
-[submodule "bundle/delimitMate"]
-	path = bundle/delimitMate
-	url = git://github.com/Raimondi/delimitMate.git
 [submodule "bundle/vim-surround"]
 	path = bundle/vim-surround
 	url = git://github.com/tpope/vim-surround.git
 [submodule "bundle/tslime"]
 	path = bundle/tslime
 	url = https://github.com/jgdavey/tslime.vim.git
-[submodule "bundle/numbers.vim"]
-	path = bundle/numbers.vim
-	url = https://github.com/myusuf3/numbers.vim.git
 [submodule "bundle/YouCompleteMe"]
 	path = bundle/YouCompleteMe
 	url = https://github.com/Valloric/YouCompleteMe.git
