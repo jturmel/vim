@@ -25,9 +25,6 @@
 [submodule "bundle/vim-flake8"]
 	path = bundle/vim-flake8
 	url = git://github.com/nvie/vim-flake8.git
-[submodule "bundle/ack.vim"]
-	path = bundle/ack.vim
-	url = git://github.com/mileszs/ack.vim.git
 [submodule "bundle/tagbar"]
 	path = bundle/tagbar
 	url = git://github.com/majutsushi/tagbar.git
@@ -43,9 +40,6 @@
 [submodule "bundle/virtualenv"]
 	path = bundle/virtualenv
 	url = git://github.com/jmcantrell/vim-virtualenv.git
-[submodule "bundle/python-mode"]
-	path = bundle/python-mode
-	url = https://github.com/klen/python-mode
 [submodule "bundle/delimitMate"]
 	path = bundle/delimitMate
 	url = git://github.com/Raimondi/delimitMate.git
