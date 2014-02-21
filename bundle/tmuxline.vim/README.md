@@ -6,7 +6,7 @@ Simple tmux statusline generator with support for powerline symbols and airline 
 
 ## Features
 
-- use [vim-airline][7] colors, so tmux and vim share the same statusline colortheme
+- use [vim-airline][7]/[lightline.vim][12] colors, so tmux and vim share the same statusline colortheme
 - preloaded with stock themes and presets, which can be combined anyway you want
 - configure tmux statusline using a simple hash, in case stock presets don't meet your needs
 - create a snapshot .conf file which can be sourced by tmux, no need to open vim to set your tmux statusline
@@ -41,6 +41,32 @@ Note that `:Tmuxline` and `:TmuxlineSnapshot` are available only when vim is ins
 Just start vim inside of tmux. airline's colors will be applied to tmux's statusline
 
 ![img](https://f.cloud.github.com/assets/1532071/1556059/d24a5c42-4ea7-11e3-9965-c13418d889a1.png)
+
+Alternatively, you can set it manually using `airline_*` themes:
+```
+:Tmuxline airline
+" or
+:Tmuxline airline_insert
+" or
+:Tmuxline airline_visual
+```
+
+If you set airline theme manually, make sure the [airline-tmuxline][11] extension  is disabled, so it doesn't overwrite the theme:
+`let g:airline#extensions#tmuxline#enabled = 0`
+
+### lightline.vim
+
+To apply lightline.vim's colors on tmux, use one of the `lightline_*` themes:
+```
+:Tmuxline lightline
+" or
+:Tmuxline lightline_insert
+" or
+:Tmuxline lightline_visual
+```
+
+![img](https://f.cloud.github.com/assets/1532071/2058566/ec64bf70-8b77-11e3-883f-82b41a83f6ac.png)
+
 
 ### Stock preset
 
@@ -189,9 +215,7 @@ Somewhat-similar plugins:
 
 ## License
 
-MIT License. Copyright (c) 2013 Evgeni Kolev.
-
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/edkolev/tmuxline.vim/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+MIT License. Copyright (c) 2013-2014 Evgeni Kolev.
 
 [1]: http://paulrouget.com/e/myconf/
 [2]: https://github.com/bling/vim-airline
@@ -204,7 +228,5 @@ MIT License. Copyright (c) 2013 Evgeni Kolev.
 [9]: https://github.com/gmarik/vundle
 [10]: https://github.com/Shougo/neobundle.vim
 [11]: https://github.com/bling/vim-airline#tmuxline
-
-
-
+[12]: https://github.com/itchyny/lightline.vim
 
