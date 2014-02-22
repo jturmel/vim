@@ -19,6 +19,7 @@ Bundle 'scrooloose/nerdtree'
 Bundle 'tpope/vim-endwise'
 Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-unimpaired'
+Bundle 'troydm/pb.vim'
 Bundle 'vim-ruby/vim-ruby'
 
 " change the mapleader from \ to , it's important that this
@@ -53,6 +54,11 @@ set softtabstop=4
 set tabstop=4
 set ttyfast "Improved redrawing
 set history=1000
+
+"override tab settings for ruby files
+autocmd Filetype ruby setlocal ts=2 sts=2 sw=2
+
+au BufRead,BufNewFile *.conf set ft=nginx
 
 set autoindent
 set copyindent
