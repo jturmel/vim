@@ -178,6 +178,8 @@ let g:pymode_utils_whitespaces = 0
 let g:pymode_breakpoint = 0
 let g:pymode_lint_ignore = "W402"
 
+set completeopt=menu
+
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
 :nmap <leader>t "=strftime('%s')<C-M>p"
