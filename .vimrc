@@ -23,6 +23,7 @@ Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-unimpaired'
 Bundle 'troydm/pb.vim'
 Bundle 'vim-ruby/vim-ruby'
+Bundle 'vadimr/cab.vim'
 
 " change the mapleader from \ to , it's important that this
 " is at/near the top of the file so that other mapped comamnds
